@@ -31,18 +31,25 @@ h1, h2, h3, h4, h5 {
 
 .hero {
     background: linear-gradient(135deg, #101820FF, #FEE715FF);
-    padding: 100px 0;
+    padding: 60px 0;  /* Reduced padding */
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh; /* Adjusted min-height for a more balanced look */
 }
 
 .hero .display-4 {
-    font-size: 3.5rem;
+    font-size: 2.5rem; /* Reduced font size for the title */
     color: #FEE715FF;
+    margin-bottom: 15px;  /* Added margin to space out the text */
 }
 
 .hero .lead {
-    font-size: 1.25rem;
+    font-size: 1.2rem; /* Adjusted font size for the description */
     color: #fff;
+    margin-bottom: 20px;  /* Added space below the description */
 }
 
 .hero .btn-yellow {
@@ -103,4 +110,86 @@ footer {
 footer p {
     margin: 0;
     font-size: 1rem;
+}
+
+/* About Us Page Specific Styles */
+.hero {
+    background-color: #101820FF;
+    padding: 60px 0; /* Reduced padding */
+    color: #FEE715FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh; /* Reduced height */
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Reduced font size for the title */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-text {
+    font-weight: 400;
+}
+
+.card-body {
+    background-color: #101820FF;
+    color: #FEE715FF;
+}
+
+.card:hover {
+    background-color: #FEE715FF;
+    color: #101820FF;
+}
+
+/* About Us Content Section */
+.about-content {
+    text-align: center;
+    padding: 50px 15px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: #FEE715FF;
+    margin-bottom: 40px;
+}
+
+.about-content .card-deck .card {
+    margin-bottom: 20px;
+}
+
+/* Ensure responsive adjustments */
+@media (max-width: 767px) {
+    .hero .display-4 {
+        font-size: 2rem;
+    }
+
+    .hero .lead {
+        font-size: 1rem;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
 }
