@@ -1,1 +1,117 @@
-Hi Amma
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NoidMe - FIDO & FIDO2 Security</title>
+    
+    <!-- Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Header/Nav -->
+    <header>
+        <div class="container">
+            <h1>NoidMe</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#developer">Developer</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to NoidMe</h2>
+            <p>Your open-source solution for FIDO and FIDO2 security implementation.</p>
+            <button class="cta-btn">Get Started</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>NoidMe is built to facilitate FIDO/FIDO2 implementation, providing both free and paid services for developers and enterprises.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="tab-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="free">Free Services</button>
+                    <button class="tab-btn" data-tab="paid">Paid Services</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="free">
+                        <p>Learn about our free tools and resources for developers to implement FIDO/FIDO2 standards.</p>
+                    </div>
+                    <div class="tab-pane" id="paid">
+                        <p>Explore our paid offerings for enterprise solutions, premium support, and custom integrations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section id="developer">
+        <div class="container">
+            <h2>Developer Resources</h2>
+            <p>Access our open-source library, APIs, and SDKs to get started with FIDO/FIDO2 implementation.</p>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources">
+        <div class="container">
+            <h2>Resources</h2>
+            <p>Explore external resources and guides for deeper insights into FIDO/FIDO2 and security best practices.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NoidMe - All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
