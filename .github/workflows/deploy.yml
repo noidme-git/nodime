@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,33 +36,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: github-pages
-          path: ./out
-          retention-days: 1
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: ./out
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      - name: Create .nojekyll file
+        run: touch ./out/.nojekyll
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages-static
+          name: github-pages
           path: ./out
 
       - name: Deploy to GitHub Pages
