@@ -22,25 +22,15 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit
 
       - name: Build
         run: npm run build
 
-      - name: Create .nojekyll file
-        run: |
-          touch ./out/.nojekyll
-          ls -la ./out/.nojekyll
-          echo "Contents of out directory:"
-          ls -la ./out/
-
-      - name: Deploy to docs folder
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git checkout -b docs-deploy
-          cp -r out/* .
-          rm -rf out
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push origin docs-deploy --force
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: docs-deploy
+          cname: noidme-git.github.io
