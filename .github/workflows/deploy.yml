@@ -37,6 +37,8 @@ jobs:
         run: |
           touch ./out/.nojekyll
           ls -la ./out/.nojekyll
+          echo "Contents of out directory:"
+          ls -la ./out/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
